@@ -1,3 +1,8 @@
+.sharp {
+  position: relative;
+  z-index: 3;
+}
+
 .piano-key {
   width: 80px;
   height: 270px;
@@ -12,11 +17,34 @@
     // colors
     background-color: #fff;
   }
+
+  &.sharp {
+    position: absolute;
+    bottom: -26px;
+    left: -31px;
+    width: 54px;
+    height: 170px;
+    border-radius: 0px 0px 9px 9px;
+
+    // colors
+    background-color: #313940;
+
+    &:hover {
+      // colors
+      background-color: #212121;
+    }
+  }
+}
+
+.sharp .piano-key-name {
+  position: absolute;
+  top: -184px;
+  left: -31px;
 }
 
 .piano-key-name {
-  width: 80px;
   margin: 4px;
+  width: max-content;
 
   // flex
   display: flex;

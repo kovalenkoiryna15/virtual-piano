@@ -1,16 +1,28 @@
 {
   "keys": {
     "firstOctave": {
-      "tones": [
+      "keys": [
         {
           "note": "до",
           "letter": "S",
           "audio": "c.mp3"
         },
         {
+          "note": "до-диез",
+          "letter": "E",
+          "audio": "c#.mp3",
+          "sharp": true
+        },
+        {
           "note": "ре",
           "letter": "D",
           "audio": "d.mp3"
+        },
+        {
+          "note": "ре-диез",
+          "letter": "R",
+          "audio": "d#.mp3",
+          "sharp": true
         },
         {
           "note": "ми",
@@ -23,9 +35,21 @@
           "audio": "f.mp3"
         },
         {
+          "note": "фа-диез",
+          "letter": "Y",
+          "audio": "f#.mp3",
+          "sharp": true
+        },
+        {
           "note": "соль",
           "letter": "H",
           "audio": "g.mp3"
+        },
+        {
+          "note": "соль-диез",
+          "letter": "U",
+          "audio": "g#.mp3",
+          "sharp": true
         },
         {
           "note": "ля",
@@ -33,36 +57,15 @@
           "audio": "a.mp3"
         },
         {
+          "note": "ля-диез",
+          "letter": "I",
+          "audio": "a#.mp3",
+          "sharp": true
+        },
+        {
           "note": "си",
           "letter": "K",
           "audio": "b.mp3"
-        }
-      ],
-      "semitones": [
-        {
-          "note": "до-диез",
-          "letter": "E",
-          "audio": "c#.mp3"
-        },
-        {
-          "note": "ре-диез",
-          "letter": "R",
-          "audio": "d#.mp3"
-        },
-        {
-          "note": "фа-диез",
-          "letter": "Y",
-          "audio": "f#.mp3"
-        },
-        {
-          "note": "соль-диез",
-          "letter": "U",
-          "audio": "g#.mp3"
-        },
-        {
-          "note": "ля-диез",
-          "letter": "I",
-          "audio": "a#.mp3"
         }
       ]
     }

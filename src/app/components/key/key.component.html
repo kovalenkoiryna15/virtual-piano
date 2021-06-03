@@ -1,2 +1,4 @@
-<div class="piano-key"></div>
-<div class="piano-key-name">{{ key.note }}</div>
+<div [class.sharp]="isSharp">
+  <div [class]="'piano-key'" [class.sharp]="isSharp"></div>
+  <div class="piano-key-name">{{ key.note }}</div>
+</div>

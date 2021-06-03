@@ -10,11 +10,7 @@ export class KeysService {
 
   constructor() { }
 
-  getTones(): Array<Key> {
-    return mockKeys.keys.firstOctave.tones;
-  }
-
-  getSemiTones(): Array<Key> {
-    return mockKeys.keys.firstOctave.semitones;
+  getKeys(): Array<Key> {
+    return mockKeys.keys.firstOctave.keys;
   }
 }

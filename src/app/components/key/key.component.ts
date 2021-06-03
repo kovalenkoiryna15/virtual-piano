@@ -9,9 +9,12 @@ import { Key } from 'src/app/common/models/key.model';
 export class KeyComponent implements OnInit {
   @Input() key!: Key;
 
-  constructor() { }
+  isSharp: boolean = false;
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.isSharp = !!this.key.sharp;
   }
 
 }
