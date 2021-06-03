@@ -13,7 +13,7 @@ export class KeyboardComponent implements OnInit {
   constructor(private keyService: KeysService) { }
 
   ngOnInit(): void {
-    this.keys = this.keyService.getKeys();
+    this.keys = this.keyService.getTones();
   }
 
 }

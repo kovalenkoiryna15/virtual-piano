@@ -1,0 +1,27 @@
+.piano-key {
+  width: 80px;
+  height: 270px;
+  margin: 4px;
+  border-radius: 0px 0px 12px 12px;
+  transition: 0.3s;
+  cursor: pointer;
+  // colors
+  background-color: #e0e1e3;
+
+  &:hover {
+    // colors
+    background-color: #fff;
+  }
+}
+
+.piano-key-name {
+  width: 80px;
+  margin: 4px;
+
+  // flex
+  display: flex;
+  justify-content: center;
+
+  // colors
+  color: #fff;
+}
