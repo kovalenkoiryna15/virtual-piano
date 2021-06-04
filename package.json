@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o --port 4201",
-    "build": "ng build",
+    "build": "ng build --base-href=https://kovalenkoiryna15.github.io/virtual-piano/virtual-piano/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
