@@ -31,4 +31,4 @@ deploy:
   github_token: $GITHUB_TOKEN_VP
   local_dir: dist
   on:
-    branch: virtual-piano
+    branch: master
