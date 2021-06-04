@@ -41,8 +41,10 @@ export class KeyComponent implements OnInit {
   }
 
   private play(): void {
-    this.audio = new Audio('../../../assets/audio/' + this.key.audio);
+    this.audio = new Audio('/assets/audio/' + this.key.audio);
     this.audio.load();
-    this.audio.play();
+    this.audio.play().catch((err: Error) => {
+      console.log(err.message);
+    });;
   }
 }
