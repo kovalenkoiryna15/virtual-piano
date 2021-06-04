@@ -40,7 +40,7 @@ export class KeyComponent implements OnInit {
     this.play();
   }
 
-  private play() {
+  private play(): void {
     this.audio = new Audio('../../../assets/audio/' + this.key.audio);
     this.audio.load();
     this.audio.play();
