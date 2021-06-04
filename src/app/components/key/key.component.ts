@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Key } from 'src/app/common/models/key.model';
 
 @Component({
@@ -10,6 +10,25 @@ export class KeyComponent implements OnInit {
   @Input() key!: Key;
 
   isSharp: boolean = false;
+  isPressed: boolean = false;
+  audio?: HTMLAudioElement;
+
+  @HostListener('window:keyup', ['$event'])
+  handleKeyUp(event: KeyboardEvent) {
+    if (event.code === this.key.code) {
+      this.isPressed = false;
+    }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.code === this.key.code) {
+      if (!this.isPressed) {
+        this.isPressed = true;
+        this.play();
+      }
+    }
+  }
 
   constructor() {}
 
@@ -17,4 +36,13 @@ export class KeyComponent implements OnInit {
     this.isSharp = !!this.key.sharp;
   }
 
+  onClick(): void {
+    this.play();
+  }
+
+  private play() {
+    this.audio = new Audio('../../../assets/audio/' + this.key.audio);
+    this.audio.load();
+    this.audio.play();
+  }
 }

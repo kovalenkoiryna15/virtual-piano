@@ -5,67 +5,79 @@
         {
           "note": "до",
           "letter": "S",
-          "audio": "c.mp3"
+          "audio": "c.mp3",
+          "code": "KeyS"
         },
         {
           "note": "до-диез",
           "letter": "E",
-          "audio": "c#.mp3",
-          "sharp": true
+          "audio": "c-sharp.mp3",
+          "sharp": true,
+          "code": "KeyE"
         },
         {
           "note": "ре",
           "letter": "D",
-          "audio": "d.mp3"
+          "audio": "d.mp3",
+          "code": "KeyD"
         },
         {
           "note": "ре-диез",
           "letter": "R",
-          "audio": "d#.mp3",
-          "sharp": true
+          "audio": "d-sharp.mp3",
+          "sharp": true,
+          "code": "KeyR"
         },
         {
           "note": "ми",
           "letter": "F",
-          "audio": "e.mp3"
+          "audio": "e.mp3",
+          "code": "KeyF"
         },
         {
           "note": "фа",
           "letter": "G",
-          "audio": "f.mp3"
+          "audio": "f.mp3",
+          "code": "KeyG"
         },
         {
           "note": "фа-диез",
           "letter": "Y",
-          "audio": "f#.mp3",
-          "sharp": true
+          "audio": "f-sharp.mp3",
+          "sharp": true,
+          "code": "KeyY"
         },
         {
           "note": "соль",
           "letter": "H",
-          "audio": "g.mp3"
+          "audio": "g.mp3",
+          "code": "KeyH"
         },
         {
           "note": "соль-диез",
           "letter": "U",
-          "audio": "g#.mp3",
-          "sharp": true
+          "audio": "g-sharp.mp3",
+          "sharp": true,
+          "code": "KeyU"
         },
         {
           "note": "ля",
           "letter": "J",
-          "audio": "a.mp3"
+          "audio": "a.mp3",
+          "code": "KeyJ"
         },
         {
           "note": "ля-диез",
           "letter": "I",
-          "audio": "a#.mp3",
-          "sharp": true
+          "audio": "a-sharp.mp3",
+          "sharp": true,
+          "code": "KeyI"
         },
         {
           "note": "си",
           "letter": "K",
-          "audio": "b.mp3"
+          "audio": "b.mp3",
+          "code": "KeyK"
         }
       ]
     }

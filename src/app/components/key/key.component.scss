@@ -7,6 +7,8 @@
   width: 80px;
   height: 270px;
   margin: 4px;
+  border: 0;
+  padding: 0;
   border-radius: 0px 0px 12px 12px;
   transition: 0.3s;
   cursor: pointer;
@@ -18,9 +20,14 @@
     background-color: #fff;
   }
 
+  &.pressed {
+    // colors
+    background-color: #fff;
+  }
+
   &.sharp {
     position: absolute;
-    bottom: -26px;
+    bottom: -24px;
     left: -31px;
     width: 54px;
     height: 170px;
@@ -30,6 +37,11 @@
     background-color: #313940;
 
     &:hover {
+      // colors
+      background-color: #212121;
+    }
+
+    &.pressed {
       // colors
       background-color: #212121;
     }

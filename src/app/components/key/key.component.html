@@ -1,4 +1,4 @@
 <div [class.sharp]="isSharp">
-  <div [class]="'piano-key'" [class.sharp]="isSharp"></div>
+  <button [class]="'piano-key'" [class.sharp]="isSharp" [class.pressed]="isPressed" (click)="onClick()"></button>
   <div class="piano-key-name">{{ key.note }}</div>
 </div>
