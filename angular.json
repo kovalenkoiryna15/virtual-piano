@@ -30,7 +30,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets/",
-                "output": "./assets/"
+                "output": "/virtual-piano/virtual-piano/assets/"
               },
               {
                 "glob": "favicon.ico",
