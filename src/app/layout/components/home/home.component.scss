@@ -1,0 +1,10 @@
+:host, .container {
+  min-height: 100%;
+  width: 100vw;
+
+  // flex
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

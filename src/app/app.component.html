@@ -1,2 +1,38 @@
-<app-header></app-header>
-<app-main></app-main>
+<mat-drawer-container class="container">
+  <mat-drawer #drawer mode="push" class="sideNav">
+    <mat-list role="list">
+      <li routerLinkActive #rla1="routerLinkActive">
+        <a mat-button [color]="(rla1.isActive)? 'accent' : 'basic'" class="menuLink" href="#" routerLink="/home">
+          <mat-icon class="menuLink__icon">home</mat-icon>
+          Home
+        </a>
+      </li>
+      <li routerLinkActive #rla2="routerLinkActive">
+        <a mat-button [color]="(rla2.isActive)? 'accent' : 'basic'" class="menuLink" href="#" routerLink="/about">
+          <mat-icon class="menuLink__icon">auto_stories</mat-icon>
+          About
+        </a>
+      </li>
+    </mat-list>
+  </mat-drawer>
+
+
+  <app-header>
+    <div>
+      <button type="button" mat-icon-button color="accent" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </app-header>
+
+  <main class="main">
+    <router-outlet
+      #routerOutlet="outlet"
+      (activate)='onActivate($event, routerOutlet)'
+      (deactivate)='onDeactivate($event, routerOutlet)'>
+    </router-outlet>
+  </main>
+</mat-drawer-container>
+
+
+

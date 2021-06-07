@@ -1,7 +1,43 @@
-:host {
+:host, .container {
   min-height: 100vh;
 
   // flex
   display: flex;
   flex-direction: column;
+}
+
+.sideNav {
+  padding: 20px;
+}
+
+.menuLink {
+  width: 90%;
+  margin: 10px;
+  text-align: center;
+}
+
+.menuLink__icon {
+  margin: 8px;
+}
+
+.main {
+  min-height: 90vh;
+  width: 100vw;
+
+  // flex
+  display: flex;
+  flex-grow: 2;
+
+  // colors
+  background-color: #313940;
+  color: #fff;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+ul, li {
+	list-style: none;
 }
