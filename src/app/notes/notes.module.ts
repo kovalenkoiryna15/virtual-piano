@@ -9,6 +9,7 @@ import { NoteListComponent, NoteComponent, NoteFormComponent  } from './componen
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     NotesRoutingModule,
     MatCardModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class NoteModule { }

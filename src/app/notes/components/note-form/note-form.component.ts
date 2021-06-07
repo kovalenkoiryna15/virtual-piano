@@ -24,10 +24,7 @@ export class NoteFormComponent implements OnInit {
 
     const observer = {
       next: (note: Note | undefined) => {
-        if (note) {
-          return note;
-        }
-        return this.note;
+        if (note) this.note = { ...this.note, ...note };
       },
       error: (err: any) => console.log(err),
       complete: () => {},
