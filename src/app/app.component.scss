@@ -21,12 +21,8 @@
 }
 
 .main {
-  min-height: 90vh;
-  width: 100vw;
-
-  // flex
-  display: flex;
-  flex-grow: 2;
+  min-width: 100%;
+  min-height: 100%;
 
   // colors
   background-color: #313940;

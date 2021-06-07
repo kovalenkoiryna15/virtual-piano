@@ -1,0 +1,20 @@
+<mat-grid-list>
+  <div>
+    <h4>Message Log</h4>
+    <span>
+      <a class="btn btn-default" (click)="onClose()">x</a>
+    </span>
+  </div>
+
+  <div>
+    <textarea [(ngModel)]="message"></textarea>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-primary" (click)="onSend()">Send</button>
+  </div>
+
+  <div *ngFor="let message of messagesService.getMessages()" class="messageList">
+    {{ message }}
+  </div>
+</mat-grid-list>

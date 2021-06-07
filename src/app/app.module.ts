@@ -11,16 +11,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutModule } from './layout/layout.module';
 import { NoteModule } from './notes/notes.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,6 +27,7 @@ import { NoteModule } from './notes/notes.module';
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
     LayoutModule,
     NoteModule,
 
@@ -36,7 +35,7 @@ import { NoteModule } from './notes/notes.module';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(router: Router) {

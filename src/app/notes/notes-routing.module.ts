@@ -5,11 +5,11 @@ import { NoteListComponent, NoteFormComponent } from './components';
 
 const routes: Routes = [
   { path: 'notes', component: NoteListComponent },
-  { path: 'edit/:noteID', component: NoteFormComponent }
+  { path: 'edit/:noteID', component: NoteFormComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class NotesRoutingModule { }
+export class NotesRoutingModule {}

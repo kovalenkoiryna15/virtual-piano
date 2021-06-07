@@ -4,11 +4,10 @@ import { Key } from '../common/models/key.model';
 import mockKeys from '../mocks/piano-keys.json';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class KeysService {
-
-  constructor() { }
+  constructor() {}
 
   getKeys(): Array<Key> {
     return mockKeys.keys.firstOctave.keys;

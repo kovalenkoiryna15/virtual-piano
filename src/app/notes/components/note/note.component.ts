@@ -1,11 +1,18 @@
-import { Component, OnInit, ChangeDetectionStrategy,  EventEmitter, Input, Output, } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { Note } from './../../models/note.model';
 
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NoteComponent implements OnInit {
   @Input() note!: Note;
@@ -21,5 +28,4 @@ export class NoteComponent implements OnInit {
   }
 
   ngOnInit() {}
-
 }

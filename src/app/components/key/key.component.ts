@@ -4,13 +4,13 @@ import { Key } from 'src/app/common/models/key.model';
 @Component({
   selector: 'app-key',
   templateUrl: './key.component.html',
-  styleUrls: ['./key.component.scss']
+  styleUrls: ['./key.component.scss'],
 })
 export class KeyComponent implements OnInit {
   @Input() key!: Key;
 
-  isSharp: boolean = false;
-  isPressed: boolean = false;
+  isSharp = false;
+  isPressed = false;
   audio?: HTMLAudioElement;
 
   @HostListener('window:keyup', ['$event'])
@@ -45,6 +45,6 @@ export class KeyComponent implements OnInit {
     this.audio.load();
     this.audio.play().catch((err: Error) => {
       console.log(err.message);
-    });;
+    });
   }
 }
