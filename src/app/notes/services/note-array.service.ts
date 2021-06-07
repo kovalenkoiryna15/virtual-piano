@@ -19,9 +19,9 @@ export class NoteArrayService {
     return noteListPromise;
   }
 
-  getNote(id: number | string): Promise<Note | undefined> {
+  getNote(id: number): Promise<Note | undefined> {
     return this.getNotes()
-      .then(notes => notes.find(note => note.id === +id))
+      .then(notes => notes.find(note => note.id === id))
       .catch(() => Promise.reject('Error in getTask method'));
   }
 
@@ -30,17 +30,13 @@ export class NoteArrayService {
   }
 
   updateNote(note: Note): void {
-    const i = noteList.findIndex(t => t.id === note.id);
-    if (i > -1) {
-      noteList.splice(i, 1, note);
-    }
+    const i = noteList.findIndex(n => n.id === note.id);
+    if (i > -1) noteList.splice(i, 1, note);
   }
 
   deleteNote(note: Note): void {
-    const i = noteList.findIndex(note => note.id === note.id);
-    if (i > -1) {
-      noteList.splice(i, 1);
-    }
+    const i = noteList.findIndex(n => n.id === note.id);
+    if (i > -1) noteList.splice(i, 1);
   }
 
 }

@@ -1,4 +1,4 @@
-<div>
+<mat-card>
   <div>Note</div>
   <div>
     <ul>
@@ -9,13 +9,15 @@
       <li>Done: {{note.done}}</li>
     </ul>
     <button
+      mat-button color="primary"
       (click)="onCompleteNote()"
       [disabled]="note.done">
       Done
     </button>
     <button
+      mat-button color="primary"
       (click)="onEditNote()">
       Edit
     </button>
   </div>
-</div>
+</mat-card>

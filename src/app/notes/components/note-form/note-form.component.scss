@@ -1,0 +1,37 @@
+:host {
+  width: 100%;
+
+  // flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__container {
+  width: 100%;
+
+  // flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  width: 300px;
+
+  & input {
+    width: 100%;
+  }
+}
+
+.form__field {
+  width: 100%;
+}
+
+.controls {
+  // flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

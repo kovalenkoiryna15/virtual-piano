@@ -1,0 +1,59 @@
+<div class="form__container">
+  <div>
+    <h4>Note Form</h4>
+  </div>
+
+  <div>
+    <form *ngIf="note" (ngSubmit)="onSaveNote()" id="note-form" #form="ngForm" class="form">
+      <mat-form-field class="form__field">
+        <mat-label for="action">Action</mat-label>
+        <input matInput type="text"
+          id="action" name="action"
+          placeholder="Action"
+          required
+          [(ngModel)]="note.action">
+      </mat-form-field>
+
+      <mat-form-field class="form__field">
+        <mat-label for="priority">Priority</mat-label>
+        <input matInput type="number"
+          min="1" max="3"
+          id="priority" name="priority"
+          placeholder="Priority"
+          [(ngModel)]="note.priority">
+      </mat-form-field>
+
+      <mat-form-field class="form__field">
+        <mat-label for="estHours">Est. Hours</mat-label>
+        <input matInput type="number"
+          min="0"
+          step="2"
+          id="estHours" name="estHours"
+          placeholder="Est. Hours"
+          [(ngModel)]="note.estHours">
+      </mat-form-field>
+
+      <div class="controls">
+        <button
+          mat-button color="primary"
+          type="submit"
+          form="note-form"
+          [disabled]="form.invalid"
+        >
+          Save
+        </button>
+
+        <button
+          mat-button color="primary"
+          type="button"
+          class="btn btn-primary"
+          (click)="onGoBack()"
+        >
+          Back
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

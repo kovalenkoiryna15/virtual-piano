@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Note } from './../../models/note.model';
-
 import { NoteArrayService } from './../../services/note-array.service';
 
 @Component({
@@ -13,7 +13,10 @@ export class NoteListComponent implements OnInit {
 
   notes!: Promise<Array<Note>>;
 
-  constructor(private noteArrayService: NoteArrayService) { }
+  constructor(
+    private noteArrayService: NoteArrayService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.notes = this.noteArrayService.getNotes();
@@ -25,6 +28,8 @@ export class NoteListComponent implements OnInit {
     this.noteArrayService.updateNote(updatedNote);
   }
 
-  onEditNote(note: Note): void {}
+  onEditNote(note: Note): void {
+    this.router.navigate(['/edit', note.id]);
+  }
 
 }

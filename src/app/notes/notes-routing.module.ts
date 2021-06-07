@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NoteListComponent } from './components';
+import { NoteListComponent, NoteFormComponent } from './components';
 
 const routes: Routes = [
-  { path: 'notes', component: NoteListComponent }
+  { path: 'notes', component: NoteListComponent },
+  { path: 'edit/:noteID', component: NoteFormComponent }
 ];
 
 @NgModule({

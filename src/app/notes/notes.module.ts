@@ -4,18 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { NotesRoutingModule } from './notes-routing.module';
 
-import { NoteListComponent, NoteComponent } from './components';
+import { NoteListComponent, NoteComponent, NoteFormComponent  } from './components';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
   declarations: [
     NoteComponent,
-    NoteListComponent
+    NoteListComponent,
+    NoteFormComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    NotesRoutingModule
+    NotesRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule
   ]
 })
 export class NoteModule { }
