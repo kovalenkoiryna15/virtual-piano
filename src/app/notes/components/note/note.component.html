@@ -1,0 +1,21 @@
+<div>
+  <div>Note</div>
+  <div>
+    <ul>
+      <li>Action: {{note.action}}</li>
+      <li>Priority: {{note.priority}}</li>
+      <li>Estimate Hours: {{note.estHours}}</li>
+      <li>Actual Hours: {{note.actHours}}</li>
+      <li>Done: {{note.done}}</li>
+    </ul>
+    <button
+      (click)="onCompleteNote()"
+      [disabled]="note.done">
+      Done
+    </button>
+    <button
+      (click)="onEditNote()">
+      Edit
+    </button>
+  </div>
+</div>

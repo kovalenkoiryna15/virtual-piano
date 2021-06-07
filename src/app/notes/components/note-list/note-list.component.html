@@ -1,0 +1,6 @@
+<app-note
+  *ngFor="let note of notes | async"
+  [note]="note"
+  (completeNote)="onCompleteNote($event)"
+  (editNote)="onEditNote($event)">
+</app-note>

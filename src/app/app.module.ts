@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutModule } from './layout/layout.module';
+import { NoteModule } from './notes/notes.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,9 @@ import { LayoutModule } from './layout/layout.module';
     MatIconModule,
     MatListModule,
     LayoutModule,
+    NoteModule,
+
+    // !Must be last
     AppRoutingModule,
   ],
   providers: [],

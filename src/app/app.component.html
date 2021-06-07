@@ -2,15 +2,21 @@
   <mat-drawer #drawer mode="push" class="sideNav">
     <mat-list role="list">
       <li routerLinkActive #rla1="routerLinkActive">
-        <a mat-button [color]="(rla1.isActive)? 'accent' : 'basic'" class="menuLink" href="#" routerLink="/home">
+        <a mat-button [color]="(rla1.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/home">
           <mat-icon class="menuLink__icon">home</mat-icon>
           Home
         </a>
       </li>
       <li routerLinkActive #rla2="routerLinkActive">
-        <a mat-button [color]="(rla2.isActive)? 'accent' : 'basic'" class="menuLink" href="#" routerLink="/about">
+        <a mat-button [color]="(rla2.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/about">
           <mat-icon class="menuLink__icon">auto_stories</mat-icon>
           About
+        </a>
+      </li>
+      <li routerLinkActive #rla3="routerLinkActive">
+        <a mat-button [color]="(rla3.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/notes">
+          <mat-icon class="menuLink__icon">note_alt</mat-icon>
+          Notes
         </a>
       </li>
     </mat-list>
