@@ -1,20 +1,18 @@
-<mat-grid-list>
-  <div>
-    <h4>Message Log</h4>
-    <span>
-      <a class="btn btn-default" (click)="onClose()">x</a>
-    </span>
-  </div>
+<mat-card>
+  <mat-card-title class="messages__title">
+    <h4>Messages</h4>
+    <button mat-button color="primary" (click)="onClose()">x</button>
+  </mat-card-title>
 
-  <div>
+  <mat-card-content>
     <textarea [(ngModel)]="message"></textarea>
-  </div>
+  </mat-card-content>
 
-  <div>
-    <button type="button" class="btn btn-primary" (click)="onSend()">Send</button>
-  </div>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="onSend()">Send</button>
+  </mat-card-actions>
 
-  <div *ngFor="let message of messagesService.getMessages()" class="messageList">
+  <mat-card-content *ngFor="let message of messagesService.getMessages()" class="messageList">
     {{ message }}
-  </div>
-</mat-grid-list>
+  </mat-card-content>
+</mat-card>

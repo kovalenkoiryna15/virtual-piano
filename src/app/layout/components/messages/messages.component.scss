@@ -1,3 +1,17 @@
-.messageList {
-  margin-bottom: 10px;
+.messages__title {
+  & > * {
+    margin: 0;
+  }
+
+  text-align: center;
+  // flex
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
 }

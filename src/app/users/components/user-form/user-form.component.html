@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-title>
+    <h4 class="pannel-title">User Form</h4>
+  </mat-card-title>
+
+  <mat-card-content>
+    <form *ngIf="user" (ngSubmit)="onSaveUser()" id="user-form" #form="ngForm">
+      <mat-form-field class="form__field">
+        <mat-label for="firstName">First Name</mat-label>
+
+        <input
+          matInput
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+          required
+          [(ngModel)]="user.firstName"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="form__field">
+        <mat-label for="lastName">Last Name</mat-label>
+
+        <input
+          matInput
+          type="text"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+          placeholder="Last Name"
+          [(ngModel)]="user.lastName"
+        />
+      </mat-form-field>
+
+      <mat-card-actions>
+        <button
+          type="submit"
+          mat-button
+          color="primary"
+          [disabled]="form.invalid"
+        >
+          Save
+        </button>
+
+        <button mat-button color="primary" type="button" (click)="onGoBack()">
+          Back
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

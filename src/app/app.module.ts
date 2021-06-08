@@ -16,6 +16,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutModule } from './layout/layout.module';
 import { NoteModule } from './notes/notes.module';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -30,6 +31,7 @@ import { NoteModule } from './notes/notes.module';
     MatGridListModule,
     LayoutModule,
     NoteModule,
+    UsersModule,
 
     // !Must be last
     AppRoutingModule,

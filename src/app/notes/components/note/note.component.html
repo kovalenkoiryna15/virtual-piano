@@ -1,23 +1,23 @@
 <mat-card>
-  <div>Note</div>
-  <div>
+  <mat-card-title>Note</mat-card-title>
+  <mat-card-content>
     <ul>
-      <li>Action: {{note.action}}</li>
-      <li>Priority: {{note.priority}}</li>
-      <li>Estimate Hours: {{note.estHours}}</li>
-      <li>Actual Hours: {{note.actHours}}</li>
-      <li>Done: {{note.done}}</li>
+      <li>Action: {{ note.action }}</li>
+      <li>Priority: {{ note.priority }}</li>
+      <li>Estimate Hours: {{ note.estHours }}</li>
+      <li>Actual Hours: {{ note.actHours }}</li>
+      <li>Done: {{ note.done }}</li>
     </ul>
-    <button
-      mat-button color="primary"
-      (click)="onCompleteNote()"
-      [disabled]="note.done">
-      Done
-    </button>
-    <button
-      mat-button color="primary"
-      (click)="onEditNote()">
-      Edit
-    </button>
-  </div>
+    <mat-card-actions>
+      <button
+        mat-button
+        color="primary"
+        (click)="onCompleteNote()"
+        [disabled]="note.done"
+      >
+        Done
+      </button>
+      <button mat-button color="primary" (click)="onEditNote()">Edit</button>
+    </mat-card-actions>
+  </mat-card-content>
 </mat-card>

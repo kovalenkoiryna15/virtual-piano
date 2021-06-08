@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
+
+import { MessagesService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +11,13 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'virtual-piano';
 
-  onActivate($event: any, routerOutlet: RouterOutlet) {
-    console.log('Activated Component', $event, routerOutlet);
-  }
+  constructor(
+    public messagesService: MessagesService,
+    private router: Router
+  ) { }
 
-  onDeactivate($event: any, routerOutlet: RouterOutlet) {
-    console.log('Deactivated Component', $event, routerOutlet);
+  onDisplayMessages(): void {
+    this.router.navigate([{ outlets: { messages: ['messages'] } }]);
+    this.messagesService.isDisplayed = true;
   }
 }

@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>User</mat-card-title>
+  <mat-card-content>
+    <ul>
+      <li>FirstName: {{ user.firstName }}</li>
+      <li>LastName: {{ user.lastName }}</li>
+    </ul>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="onEditUser()">Edit</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

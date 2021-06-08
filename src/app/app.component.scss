@@ -29,6 +29,15 @@
   color: #fff;
 }
 
+.messages__container {
+  height: 100%;
+  // flex
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 a {
 	text-decoration: none;
 	outline: none;

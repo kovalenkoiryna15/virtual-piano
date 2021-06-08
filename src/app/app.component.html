@@ -1,23 +1,48 @@
 <mat-drawer-container class="container">
-
   <mat-drawer #drawer mode="push" class="sideNav">
     <mat-list role="list">
       <li routerLinkActive #rla1="routerLinkActive">
-        <a mat-button [color]="(rla1.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/home">
+        <a
+          mat-button
+          [color]="rla1.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/home"
+        >
           <mat-icon class="menuLink__icon">home</mat-icon>
           Home
         </a>
       </li>
       <li routerLinkActive #rla2="routerLinkActive">
-        <a mat-button [color]="(rla2.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/about">
+        <a
+          mat-button
+          [color]="rla2.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/about"
+        >
           <mat-icon class="menuLink__icon">auto_stories</mat-icon>
           About
         </a>
       </li>
       <li routerLinkActive #rla3="routerLinkActive">
-        <a mat-button [color]="(rla3.isActive)? 'accent' : 'basic'" class="menuLink" routerLink="/notes">
+        <a
+          mat-button
+          [color]="rla3.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/notes"
+        >
           <mat-icon class="menuLink__icon">note_alt</mat-icon>
           Notes
+        </a>
+      </li>
+      <li routerLinkActive #rla4="routerLinkActive">
+        <a
+          mat-button
+          [color]="rla4.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/users"
+        >
+          <mat-icon class="menuLink__icon">people</mat-icon>
+          Users
         </a>
       </li>
     </mat-list>
@@ -27,27 +52,33 @@
     <mat-grid-tile colspan="4" rowspan="1">
       <app-header>
         <div>
-          <button type="button" mat-icon-button color="accent" (click)="drawer.toggle()">
+          <button
+            type="button"
+            mat-icon-button
+            color="accent"
+            (click)="drawer.toggle()"
+          >
             <mat-icon>menu</mat-icon>
           </button>
         </div>
       </app-header>
     </mat-grid-tile>
 
-
     <mat-grid-tile colspan="3" rowspan="9">
-      <router-outlet
-        #routerOutlet="outlet"
-        (activate)='onActivate($event, routerOutlet)'
-        (deactivate)='onDeactivate($event, routerOutlet)'>
-      </router-outlet>
+      <router-outlet></router-outlet>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="9">
-      <router-outlet name="messages"></router-outlet>
+      <div class="messages__container">
+        <button
+          mat-button
+          color="primary"
+          *ngIf="!messagesService.isDisplayed"
+          (click)="onDisplayMessages()"
+        >
+          Show Messages
+        </button>
+        <router-outlet name="messages"></router-outlet>
+      </div>
     </mat-grid-tile>
   </mat-grid-list>
-
 </mat-drawer-container>
-
-
-
