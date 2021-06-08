@@ -45,6 +45,28 @@
           Users
         </a>
       </li>
+      <li routerLinkActive #rla5="routerLinkActive">
+        <a
+          mat-button
+          [color]="rla5.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/admin"
+        >
+          <mat-icon class="menuLink__icon">admin_panel_settings</mat-icon>
+          Admin
+        </a>
+      </li>
+      <li routerLinkActive #rla6="routerLinkActive">
+        <a
+          mat-button
+          [color]="rla6.isActive ? 'accent' : 'basic'"
+          class="menuLink"
+          routerLink="/auth"
+        >
+          <mat-icon class="menuLink__icon">login</mat-icon>
+          Log-in/out
+        </a>
+      </li>
     </mat-list>
   </mat-drawer>
 

@@ -1,5 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { Key } from 'src/app/common/models/key.model';
+import { Key } from 'src/app/core/models/key.model';
 
 @Component({
   selector: 'app-key',

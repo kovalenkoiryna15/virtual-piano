@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LayoutModule } from './layout/layout.module';
 import { NoteModule } from './notes/notes.module';
 import { UsersModule } from './users/users.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -32,6 +33,7 @@ import { UsersModule } from './users/users.module';
     LayoutModule,
     NoteModule,
     UsersModule,
+    AdminModule,
 
     // !Must be last
     AppRoutingModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Key } from 'src/app/common/models/key.model';
-import { KeysService } from 'src/app/services';
+import { Key } from 'src/app/core/models/key.model';
+import { KeysService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-keyboard',

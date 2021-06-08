@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Key } from '../common/models/key.model';
+import { Key } from '../models/key.model';
 
 import mockKeys from '../mocks/piano-keys.json';
 

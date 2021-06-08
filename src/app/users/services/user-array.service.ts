@@ -20,11 +20,10 @@ export class UserArrayService {
   users$: Observable<UserModel[]> = userListObservable;
 
   getUser(id: number | string): Observable<UserModel | undefined> {
-    return this.users$
-      .pipe(
-        map((users: Array<UserModel>) => users.find((user) => user.id === +id)),
-        catchError(() => throwError('Error in getUser method'))
-      );
+    return this.users$.pipe(
+      map((users: Array<UserModel>) => users.find((user) => user.id === +id)),
+      catchError(() => throwError('Error in getUser method'))
+    );
   }
 
   createUser(user: UserModel): void {

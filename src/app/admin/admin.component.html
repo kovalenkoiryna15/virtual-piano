@@ -1,0 +1,23 @@
+<h3>Admin</h3>
+<div>
+  <nav mat-tab-nav-bar>
+
+    <mat-list-item
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      label="Dashboard"
+    >
+      <a mat-tab-link routerLink="./">Dashboard</a>
+    </mat-list-item>
+
+    <mat-list-item routerLinkActive="active" label="Manage Notes">
+      <a mat-tab-link routerLink="./notes">Manage Notes</a>
+    </mat-list-item>
+
+    <mat-list-item routerLinkActive="active" label="Manage Users">
+      <a mat-tab-link routerLink="./users">Manage Users</a>
+    </mat-list-item>
+
+  </nav>
+</div>
+<router-outlet></router-outlet>

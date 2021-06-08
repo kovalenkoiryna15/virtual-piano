@@ -21,6 +21,6 @@ import { UserComponent } from './components';
     MatFormFieldModule,
     MatInputModule,
     UsersRoutingModule,
-  ]
+  ],
 })
-export class UsersModule { }
+export class UsersModule {}

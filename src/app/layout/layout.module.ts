@@ -11,9 +11,9 @@ import {
   HomeComponent,
   PathNotFoundComponent,
   MessagesComponent,
+  LoginComponent,
 } from './components';
-import { KeyboardComponent } from '../components/keyboard/keyboard.component';
-import { KeyComponent } from '../components/key/key.component';
+import { KeyboardComponent, KeyComponent } from '../components';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,14 @@ import { KeyComponent } from '../components/key/key.component';
     KeyboardComponent,
     KeyComponent,
     MessagesComponent,
+    LoginComponent,
   ],
-  imports: [CommonModule, FormsModule, MatGridListModule, MatCardModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+  ],
 })
 export class LayoutModule {}

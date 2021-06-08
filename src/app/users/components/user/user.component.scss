@@ -1,3 +1,6 @@
 :host {
   margin: 20px;
+  &.edited > :first-child {
+    border: 2px dotted red;
+  }
 }

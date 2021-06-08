@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 
-import { MessagesService } from './services';
+import { MessagesService } from './core/services';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(
     public messagesService: MessagesService,
     private router: Router
-  ) { }
+  ) {}
 
   onDisplayMessages(): void {
     this.router.navigate([{ outlets: { messages: ['messages'] } }]);
