@@ -18,6 +18,7 @@ import { LayoutModule } from './layout/layout.module';
 import { NoteModule } from './notes/notes.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { SpinnerModule } from './widgets/spinner/spinner.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -34,6 +35,7 @@ import { AdminModule } from './admin/admin.module';
     NoteModule,
     UsersModule,
     AdminModule,
+    SpinnerModule.forRoot(),
 
     // !Must be last
     AppRoutingModule,

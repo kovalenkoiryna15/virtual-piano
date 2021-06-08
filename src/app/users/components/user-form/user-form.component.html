@@ -4,7 +4,7 @@
   </mat-card-title>
 
   <mat-card-content>
-    <form *ngIf="user" (ngSubmit)="onSaveUser()" id="user-form" #form="ngForm">
+    <form (ngSubmit)="onSaveUser()" id="user-form" #form="ngForm">
       <mat-form-field class="form__field">
         <mat-label for="firstName">First Name</mat-label>
 

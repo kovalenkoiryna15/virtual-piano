@@ -6,17 +6,15 @@ import { Subscription, Observable } from 'rxjs';
 import { UserModel } from './../../models/user.model';
 import { UserArrayService } from './../../services/user-array.service';
 import { DialogService, CanComponentDeactivate } from './../../../core';
+import { pluck } from 'rxjs/operators';
 
 @Component({
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.scss'],
 })
-export class UserFormComponent
-  implements OnInit, OnDestroy, CanComponentDeactivate
-{
+export class UserFormComponent implements OnInit, CanComponentDeactivate {
   user!: UserModel;
   originalUser!: UserModel;
-  private sub!: Subscription;
 
   constructor(
     private userArrayService: UserArrayService,
@@ -26,26 +24,10 @@ export class UserFormComponent
   ) {}
 
   ngOnInit(): void {
-    this.user = new UserModel();
-
-    // !TODO recreate component because this code runs only once
-    const id = +this.route.snapshot.paramMap.get('userID')!;
-
-    const observer = {
-      next: (user: UserModel | undefined) => {
-        if (user) {
-          this.user = { ...user };
-          this.originalUser = { ...user };
-        }
-      },
-      error: (err: any) => console.log(err),
-    };
-
-    this.sub = this.userArrayService.getUser(id).subscribe(observer);
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+    this.route.data.pipe(pluck('user')).subscribe((user: UserModel) => {
+      this.user = { ...user };
+      this.originalUser = { ...user };
+    });
   }
 
   onSaveUser() {

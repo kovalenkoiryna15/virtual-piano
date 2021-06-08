@@ -5,6 +5,7 @@ import { UsersComponent } from './users.component';
 
 import { UserListComponent, UserFormComponent } from './components';
 import { CanDeactivateGuard } from './../core';
+import { UserResolveGuard } from './guards/user-resolve.guard';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
         path: 'edit/:userID',
         component: UserFormComponent,
         canDeactivate: [CanDeactivateGuard],
+        resolve: { user: UserResolveGuard }
       },
       { path: '', component: UserListComponent },
     ],
